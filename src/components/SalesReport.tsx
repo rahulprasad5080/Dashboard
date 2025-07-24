@@ -1,12 +1,13 @@
 "use client";
 
-import { CartesianGrid, Area, AreaChart, XAxis, ResponsiveContainer } from "recharts";
 import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+  CartesianGrid,
+  Area,
+  AreaChart,
+  XAxis,
+  ResponsiveContainer,
+} from "recharts";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./ui/tabs";
 import { Button } from "./ui/button";
 import { ChartContainer } from "./ui/chart";
@@ -55,30 +56,90 @@ export default function SalesReport() {
   return (
     <Card className="rounded-2xl border shadow-sm bg-white">
       <CardHeader className="flex flex-row items-center justify-between pb-2">
-        <CardTitle className="text-lg font-semibold">Sales report</CardTitle>
-        <Button variant="outline" size="sm">View report</Button>
+        <CardTitle className="text-lg font-semibold">
+          Salhjjhes report
+        </CardTitle>
+        <Button variant="outline" size="sm">
+          View report
+        </Button>
       </CardHeader>
       <CardContent>
         <Tabs defaultValue="12m" className="w-full">
           <TabsList className="mb-4 bg-transparent border-none shadow-none gap-1 flex">
-            <TabsTrigger value="12m" className="rounded-md px-3 py-1.5 text-sm font-medium data-[state=active]:bg-[#f4f4f8] data-[state=active]:text-foreground data-[state=active]:shadow-none data-[state=active]:border-none">12 months</TabsTrigger>
-            <TabsTrigger value="3m" className="rounded-md px-3 py-1.5 text-sm font-medium data-[state=active]:bg-[#f4f4f8] data-[state=active]:text-foreground data-[state=active]:shadow-none data-[state=active]:border-none">3 months</TabsTrigger>
-            <TabsTrigger value="30d" className="rounded-md px-3 py-1.5 text-sm font-medium data-[state=active]:bg-[#f4f4f8] data-[state=active]:text-foreground data-[state=active]:shadow-none data-[state=active]:border-none">30 days</TabsTrigger>
-            <TabsTrigger value="7d" className="rounded-md px-3 py-1.5 text-sm font-medium data-[state=active]:bg-[#f4f4f8] data-[state=active]:text-foreground data-[state=active]:shadow-none data-[state=active]:border-none">7 days</TabsTrigger>
-            <TabsTrigger value="24h" className="rounded-md px-3 py-1.5 text-sm font-medium data-[state=active]:bg-[#f4f4f8] data-[state=active]:text-foreground data-[state=active]:shadow-none data-[state=active]:border-none">24 hours</TabsTrigger>
+            <TabsTrigger
+              value="12m"
+              className="rounded-md px-3 py-1.5 text-sm font-medium data-[state=active]:bg-[#f4f4f8] data-[state=active]:text-foreground data-[state=active]:shadow-none data-[state=active]:border-none"
+            >
+              12 months
+            </TabsTrigger>
+            <TabsTrigger
+              value="3m"
+              className="rounded-md px-3 py-1.5 text-sm font-medium data-[state=active]:bg-[#f4f4f8] data-[state=active]:text-foreground data-[state=active]:shadow-none data-[state=active]:border-none"
+            >
+              3 months
+            </TabsTrigger>
+            <TabsTrigger
+              value="30d"
+              className="rounded-md px-3 py-1.5 text-sm font-medium data-[state=active]:bg-[#f4f4f8] data-[state=active]:text-foreground data-[state=active]:shadow-none data-[state=active]:border-none"
+            >
+              30 days
+            </TabsTrigger>
+            <TabsTrigger
+              value="7d"
+              className="rounded-md px-3 py-1.5 text-sm font-medium data-[state=active]:bg-[#f4f4f8] data-[state=active]:text-foreground data-[state=active]:shadow-none data-[state=active]:border-none"
+            >
+              7 days
+            </TabsTrigger>
+            <TabsTrigger
+              value="24h"
+              className="rounded-md px-3 py-1.5 text-sm font-medium data-[state=active]:bg-[#f4f4f8] data-[state=active]:text-foreground data-[state=active]:shadow-none data-[state=active]:border-none"
+            >
+              24 hours
+            </TabsTrigger>
           </TabsList>
           <TabsContent value="12m">
             <div className="w-full h-[260px] md:h-[320px]">
               <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={data12m} margin={{ left: 0, right: 0, top: 10, bottom: 0 }}>
+                <AreaChart
+                  data={data12m}
+                  margin={{ left: 0, right: 0, top: 10, bottom: 0 }}
+                >
                   <defs>
-                    <linearGradient id="colorDesktop" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#a78bfa" stopOpacity={0.18} />
-                      <stop offset="100%" stopColor="#a78bfa" stopOpacity={0.04} />
+                    <linearGradient
+                      id="colorDesktop"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="0%"
+                        stopColor="#a78bfa"
+                        stopOpacity={0.18}
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="#a78bfa"
+                        stopOpacity={0.04}
+                      />
                     </linearGradient>
-                    <linearGradient id="colorMobile" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#c4b5fd" stopOpacity={0.18} />
-                      <stop offset="100%" stopColor="#c4b5fd" stopOpacity={0.04} />
+                    <linearGradient
+                      id="colorMobile"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="0%"
+                        stopColor="#c4b5fd"
+                        stopOpacity={0.18}
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="#c4b5fd"
+                        stopOpacity={0.04}
+                      />
                     </linearGradient>
                   </defs>
                   <CartesianGrid vertical={false} stroke="#f4f4f8" />
@@ -87,7 +148,7 @@ export default function SalesReport() {
                     tickLine={false}
                     axisLine={false}
                     tickMargin={10}
-                    tick={{ fontSize: 14, fill: '#888' }}
+                    tick={{ fontSize: 14, fill: "#888" }}
                   />
                   <Area
                     type="monotone"
@@ -112,15 +173,46 @@ export default function SalesReport() {
           <TabsContent value="3m">
             <div className="w-full h-[260px] md:h-[320px]">
               <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={data3m} margin={{ left: 0, right: 0, top: 10, bottom: 0 }}>
+                <AreaChart
+                  data={data3m}
+                  margin={{ left: 0, right: 0, top: 10, bottom: 0 }}
+                >
                   <defs>
-                    <linearGradient id="colorDesktop3m" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#a78bfa" stopOpacity={0.18} />
-                      <stop offset="100%" stopColor="#a78bfa" stopOpacity={0.04} />
+                    <linearGradient
+                      id="colorDesktop3m"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="0%"
+                        stopColor="#a78bfa"
+                        stopOpacity={0.18}
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="#a78bfa"
+                        stopOpacity={0.04}
+                      />
                     </linearGradient>
-                    <linearGradient id="colorMobile3m" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#c4b5fd" stopOpacity={0.18} />
-                      <stop offset="100%" stopColor="#c4b5fd" stopOpacity={0.04} />
+                    <linearGradient
+                      id="colorMobile3m"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="0%"
+                        stopColor="#c4b5fd"
+                        stopOpacity={0.18}
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="#c4b5fd"
+                        stopOpacity={0.04}
+                      />
                     </linearGradient>
                   </defs>
                   <CartesianGrid vertical={false} stroke="#f4f4f8" />
@@ -129,7 +221,7 @@ export default function SalesReport() {
                     tickLine={false}
                     axisLine={false}
                     tickMargin={10}
-                    tick={{ fontSize: 14, fill: '#888' }}
+                    tick={{ fontSize: 14, fill: "#888" }}
                   />
                   <Area
                     type="monotone"
@@ -154,15 +246,46 @@ export default function SalesReport() {
           <TabsContent value="30d">
             <div className="w-full h-[260px] md:h-[320px]">
               <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={data30d} margin={{ left: 0, right: 0, top: 10, bottom: 0 }}>
+                <AreaChart
+                  data={data30d}
+                  margin={{ left: 0, right: 0, top: 10, bottom: 0 }}
+                >
                   <defs>
-                    <linearGradient id="colorDesktop30d" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#a78bfa" stopOpacity={0.18} />
-                      <stop offset="100%" stopColor="#a78bfa" stopOpacity={0.04} />
+                    <linearGradient
+                      id="colorDesktop30d"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="0%"
+                        stopColor="#a78bfa"
+                        stopOpacity={0.18}
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="#a78bfa"
+                        stopOpacity={0.04}
+                      />
                     </linearGradient>
-                    <linearGradient id="colorMobile30d" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#c4b5fd" stopOpacity={0.18} />
-                      <stop offset="100%" stopColor="#c4b5fd" stopOpacity={0.04} />
+                    <linearGradient
+                      id="colorMobile30d"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="0%"
+                        stopColor="#c4b5fd"
+                        stopOpacity={0.18}
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="#c4b5fd"
+                        stopOpacity={0.04}
+                      />
                     </linearGradient>
                   </defs>
                   <CartesianGrid vertical={false} stroke="#f4f4f8" />
@@ -171,7 +294,7 @@ export default function SalesReport() {
                     tickLine={false}
                     axisLine={false}
                     tickMargin={10}
-                    tick={{ fontSize: 12, fill: '#888' }}
+                    tick={{ fontSize: 12, fill: "#888" }}
                     minTickGap={8}
                   />
                   <Area
@@ -197,15 +320,46 @@ export default function SalesReport() {
           <TabsContent value="7d">
             <div className="w-full h-[260px] md:h-[320px]">
               <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={data7d} margin={{ left: 0, right: 0, top: 10, bottom: 0 }}>
+                <AreaChart
+                  data={data7d}
+                  margin={{ left: 0, right: 0, top: 10, bottom: 0 }}
+                >
                   <defs>
-                    <linearGradient id="colorDesktop7d" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#a78bfa" stopOpacity={0.18} />
-                      <stop offset="100%" stopColor="#a78bfa" stopOpacity={0.04} />
+                    <linearGradient
+                      id="colorDesktop7d"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="0%"
+                        stopColor="#a78bfa"
+                        stopOpacity={0.18}
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="#a78bfa"
+                        stopOpacity={0.04}
+                      />
                     </linearGradient>
-                    <linearGradient id="colorMobile7d" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#c4b5fd" stopOpacity={0.18} />
-                      <stop offset="100%" stopColor="#c4b5fd" stopOpacity={0.04} />
+                    <linearGradient
+                      id="colorMobile7d"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="0%"
+                        stopColor="#c4b5fd"
+                        stopOpacity={0.18}
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="#c4b5fd"
+                        stopOpacity={0.04}
+                      />
                     </linearGradient>
                   </defs>
                   <CartesianGrid vertical={false} stroke="#f4f4f8" />
@@ -214,7 +368,7 @@ export default function SalesReport() {
                     tickLine={false}
                     axisLine={false}
                     tickMargin={10}
-                    tick={{ fontSize: 14, fill: '#888' }}
+                    tick={{ fontSize: 14, fill: "#888" }}
                   />
                   <Area
                     type="monotone"
@@ -239,15 +393,46 @@ export default function SalesReport() {
           <TabsContent value="24h">
             <div className="w-full h-[260px] md:h-[320px]">
               <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={data24h} margin={{ left: 0, right: 0, top: 10, bottom: 0 }}>
+                <AreaChart
+                  data={data24h}
+                  margin={{ left: 0, right: 0, top: 10, bottom: 0 }}
+                >
                   <defs>
-                    <linearGradient id="colorDesktop24h" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#a78bfa" stopOpacity={0.18} />
-                      <stop offset="100%" stopColor="#a78bfa" stopOpacity={0.04} />
+                    <linearGradient
+                      id="colorDesktop24h"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="0%"
+                        stopColor="#a78bfa"
+                        stopOpacity={0.18}
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="#a78bfa"
+                        stopOpacity={0.04}
+                      />
                     </linearGradient>
-                    <linearGradient id="colorMobile24h" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#c4b5fd" stopOpacity={0.18} />
-                      <stop offset="100%" stopColor="#c4b5fd" stopOpacity={0.04} />
+                    <linearGradient
+                      id="colorMobile24h"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="0%"
+                        stopColor="#c4b5fd"
+                        stopOpacity={0.18}
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="#c4b5fd"
+                        stopOpacity={0.04}
+                      />
                     </linearGradient>
                   </defs>
                   <CartesianGrid vertical={false} stroke="#f4f4f8" />
@@ -256,7 +441,7 @@ export default function SalesReport() {
                     tickLine={false}
                     axisLine={false}
                     tickMargin={10}
-                    tick={{ fontSize: 12, fill: '#888' }}
+                    tick={{ fontSize: 12, fill: "#888" }}
                     minTickGap={8}
                   />
                   <Area
